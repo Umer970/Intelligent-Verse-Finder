@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verse Recommendation</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Intelligent Verse Finder</h1>
+    </header>
+
+    <main>
+        <h2>Verse Recommendation</h2>
+        <form id="searchForm">
+            <input type="text" id="searchBar" placeholder="Search...">
+            <select id="moodOptions">
+                <option value="anger">Anger</option>
+                <option value="sad">Sad</option>
+                <option value="happy">Happy</option>
+                <option value="frustrated">Frustrated</option>
+                <option value="frustrated">Anxious</option>
+                <option value="frustrated">Calm</option>
+                <option value="frustrated">Excited</option>
+                <!-- Add more mood options as needed -->
+            </select>
+            <button type="button" onclick="searchVerses()">Search</button>
+        </form>
+        <!-- Display search results here -->
+        <div id="searchResults"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add your JavaScript code here
+        function searchVerses() {
+            // Implement your logic for searching verses based on the search bar and mood selection
+            const searchBarValue = document.getElementById('searchBar').value;
+            const moodOptionsValue = document.getElementById('moodOptions').value;
+
+            // Example: Display search results in the searchResults div
+            const searchResultsDiv = document.getElementById('searchResults');
+            searchResultsDiv.innerHTML = `<p>Searching for "${searchBarValue}" with mood "${moodOptionsValue}"...</p>`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Verse Recommendation page loaded');
+        });
+    </script>
+</body>
+
+</html>
